@@ -1,0 +1,252 @@
+%
+% Notes:
+%
+% * Don't forget to change `pdfauthor' and `keywords' in the \hypersetup
+%   section below.
+%
+% * To create a new page use: \newpage \opening
+%
+% * res.cls includes an \address{} command which can be used up to twice,
+%   but my address is too long for the format it uses.
+%
+% * Alternate documentclass statement to put headings in margin:
+%   \documentclass[margin,line,11pt,final]{res}
+%
+% * Can divide publication/presentation list into subsections by year:
+%   \section{\bf\small\hspace{8mm}2006}
+%
+%%----------------------------------------------------------------------------%
+
+
+%\documentclass[a4paper, norsk, 11pt]{article}
+
+\documentclass[overlapped, norsk, line,letterpaper]{res}
+
+%start per
+\usepackage[T1]{fontenc}    %ndvendig til fonter
+\usepackage[latin1]{inputenc}
+%\usepackage{babel}
+%slutt per
+
+\usepackage{ifpdf}
+
+\ifpdf
+  \usepackage[pdftex]{hyperref}
+\else
+  \usepackage[hypertex]{hyperref}
+\fi
+
+\hypersetup{
+  letterpaper,
+  colorlinks,
+  urlcolor=black,
+  pdfpagemode=none,
+  pdftitle={Curriculum Vitae},
+  pdfauthor={Per R. Leikanger},
+  pdfcreator={$ $Id: cv-us.tex,v 1.28 2006/12/12 22:53:52 jrblevin Exp $ $},
+  pdfsubject={Curriculum Vitae},
+  pdfkeywords={matematikk differensialligninger linear algebra regulering linux unix c c++}
+}
+
+%%===========================================================================%%
+
+\begin{document}
+
+%---------------------------------------------------------------------------
+% Document Specific Customizations
+
+% Make lists without bullets and with no indentation
+\setlength{\leftmargini}{0em}
+\renewcommand{\labelitemi}{}
+
+% Use large bold font for printed name at top of pages
+\renewcommand{\namefont}{\large\textbf}
+
+%---------------------------------------------------------------------------
+
+\name{Per R. Leikanger}
+
+\begin{resume}
+
+\begin{ncolumn}{2}
+	Per Roald Leikanger 				& 	tel. +47 40040814 		\\
+	Engesetgeila 10					&	{\tt leikange@gmail.com}		\\
+	6100							&	{\tt github.com/leikanger} \\
+	Volda							&  \\
+\end{ncolumn}
+
+%---------------------------------------------------------------------------
+
+\section{\bf Education and Courses}
+
+MSc Engineering Cybernetics, NTNU, 2012
+
+ABC for Prosjektstyring, Course held by Tekna, 2013
+
+All available courses from the Kavli Institute of Systems Neuroscience/CBM, NTNU, 2011
+
+Lecture course by Karl A. Olsen, Studieavdelingen NTNU, 2008
+%
+%Allmenn studiekompetanse, Volda VGS, 2004
+
+%---------------------------------------------------------------------------
+
+\section{\bf Positions and Voluntary Work}
+
+
+
+\begin{format}
+\title{l}\dates{r}\\
+\employer{l}\location{r}\\
+\body\\
+\end{format}
+
+\title{Senior Software Developer}
+\employer{Rolls-Royce Marine}
+\location{Ålesund}
+\dates{June 2014 - present}
+\begin{position}
+	Programming in C++ for \emph{Rolls-Royce Marine}, working on \emph{Integrated Bridge}. 
+\end{position}
+
+\title{R\&D engineer}
+\employer{Archer -- the Well Company}
+\location{Bergen}
+%\dates{30.10.2012 - present}
+\dates{October 2012 - Mai 2014}
+\begin{position}
+	Research on the properties of sound from turbulent current under water and active ultrasound for location of leaks and integrity analysis of pipes.
+	Research and development of Archer's tool park for well integrity analysis.
+\end{position}
+
+\title{Teaching assistant, ``Real-Time Programming''}
+\employer{NTNU}
+\location{Trondheim}
+\dates{2009}
+\begin{position}
+	Teaching assistant in \emph{TTK4145 -- Real-time programming}, a course about design, analysis and programming of a system's real-time properties.
+%	The position was about helping students through the course's set of programming exercises.
+	The language used was \emph{C} with \emph{Posix}.
+\end{position}
+
+\title{Recruiting Employee}
+\employer{NTNU / Studiestart A/S}
+\location{Trondheim}
+\dates{2008}
+\begin{position}
+	NTNU's representative on Education \& Recruitment Day in four provinces of Norway.
+	During the period from january to mars 2008, I was NTNU's representative on ``Studie og yrkesorienteringsdag'' at high scools in Nord-Trøndelag, Sør-Trøndelag, Oppland and Hedemark.
+	A series of four different lectures about studying at NTNU, each on half an hour, was held on most of the colleges and high scools in the mentioned provinces. 
+	% Skrive at det var til saman 42 skoler?
+\end{position}
+
+\title{Developer}
+\employer{Industrial Control Design A/S}
+\location{Ålesund}
+\dates{2007}
+\begin{position}
+	Summer position as developer for ICD.
+	Development and testing of general and standarized filters and control components to be delivered in a standard package with Control Design Platform, ICD's main product.
+	Programming in C++, testing in WinXP, linux and RTOS-32.
+\end{position}
+
+\title{Teaching Assistant, ``Computerized Control in Industrial Systems''}
+\employer{NTNU}
+\location{Trondheim}
+\dates{2007}
+\begin{position}
+	Teaching assistant in \emph{TTK4125 -- Computerized Control in Industrial Systems}.
+	Helping the students through a set of excercises and labs about C programming and low-level programming for avr.
+	Measurement principles.
+	% TA MED LINK TIL FAGET! XXX
+\end{position}
+
+\newpage %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{Volunteer}
+\employer{Fotogjengen, Studentersamfundet i Trondhjem}
+\location{Trondheim}
+\dates{2004 - 2007}
+\begin{position}
+	``Funksjonær'' at the photo group in the Student Community in Trondheim, involving approximately 20 hours of work per week during the contract time of 2.5 years.\\
+	\emph{2005:} main responsibility of FG's IT systems. Operation and maintainance of a sales site for FG's pictures with more than 350.000 entries. \emph{www.fotogjengen.no}\\
+	\emph{2006:} Operational procurement and maintenance for FG's darkroom and photo plotter.
+\end{position}
+
+\title{Board member/ Web master}
+\employer{Excursion Committe, Kyb09}
+\location{Trondheim}
+\dates{2007}
+\begin{position}
+	Planning and collection of funds for 3. class cybernetics' excursion to Los Angeles, spring 2007.
+\end{position}
+
+\title{Volunteer}
+\employer{UKA05, UKA07, UKA09}
+\location{Trondheim}
+\dates{2005, 2007, 2009}
+\begin{position}
+	Volunteer as photographer through \emph{Fotogjengen}.
+\end{position}
+
+\title{Volunteer}
+\employer{Isfit -05, Isfit -07}
+\location{Trondheim}
+\dates{2005, 2007}
+\begin{position}
+	Volunteer as photographer through \emph{Fotogjengen}.
+\end{position}
+
+\title{Chairman}
+\employer{Utrøna Seglarlag}
+\location{Volda}
+\dates{2003 - 2004}
+\begin{position}
+	Chairmain for \emph{Utrøna brettseglarlag} in Volda -- Sports club for windsurfing and kitesurfing in Volda, Sunnmøre.
+\end{position}
+
+
+% \title{Data puncher}
+% \employer{DMF, NTNU/Helse Sunnmøre}
+% \location{Volda}
+% \dates{2003 - 2004}
+% \begin{position}
+% 	Registering the information from questionnaires in a large research project on anxiety amongst children and adolecents.
+% \end{position}
+%---------------------------------------------------------------------------
+
+%\section{\bf References}
+%
+%\begin{tabular}
+%\end{tabular}
+
+
+%\section{References}
+%\begin{tabular}{l l l}
+%Amund Skavhaug & Supervisor on MSc project & +47 73 59 4396 \\
+%\emph{amund.skavhaug@ntnu.no} &&
+%\end{tabular}
+
+
+% \section{\bf Service}
+% 
+% \begin{itemize}
+% \item Vice President, Society of Undergraduate Mathematics, North
+%   Carolina State University, 2001--2003
+% \item Vice President, Economics Graduate Student Council, Duke
+%   University, 2006--2007
+% \end{itemize}
+% %%---------------------------------------------------------------------------%%
+
+%\begin{center}
+%\vspace{\fill}\ \newline
+%{\tiny \rm $ $RCSfile: cv-us.tex,v $ $ }
+%{\tiny \rm $ $Date: \today $ $ }
+%{\tiny \rm $ $Revision: 1.0 $ $ }
+%\end{center}
+
+\end{resume}
+
+\end{document}
+
+%%===========================================================================%%
