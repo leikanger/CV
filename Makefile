@@ -1,13 +1,11 @@
+cv: curriculum_vitae.tex
+	pdflatex -output-directory output-directory -halt-on-error curriculum_vitae.tex
 
-cv: cv2016.tex
-	pdflatex cv2016.tex
-
-show:
+opneMedEnGang:
 	make cv
-	okular cv2016.pdf
-showGnome:
-	make cv
-	evince cv2016.pdf
+	echo ""
+	evince output-directory/curriculum_vitae.pdf > /dev/null 2>&1 &
 
-clean:
-	rm *aux *log
+clean: 
+	rm output-directory/*aux output-directory/*pdf output-directory/*bbl *aux *pdf *bbl *log
+
