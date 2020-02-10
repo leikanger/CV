@@ -1,1 +1,1 @@
-vim -p cv2016.tex
+nvim -O curriculum_vitae.tex Makefile
